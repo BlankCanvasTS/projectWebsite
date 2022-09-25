@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- CSS only -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+      <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <link  rel="stylesheet" href="/bootstrap.css">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="pageHome.html">Project 1</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="pageHome.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Applications</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="">Calculator</a>
+                  <a class="dropdown-item" href="pageWorldClock.html">World Clock</a>
+                  <a class="dropdown-item" href="">Who's Birthday is it?</a>
+                  <a class="dropdown-item"></a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pageJoin.html">Join</a>
+              </li>
+            </ul>
+          </div>
+          <div class="d-flex">
+            <input class="form-control mr-se-2" type="text" placeholder="Search...">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">GO</button>
+          </div>
+        </div>
+      </nav>
+
+
+    <form action="/action_page.php">
+        <div>
+            <h1 class="text-center">Login Information</h1>
+            <hr>
+            <fieldset>
+                <div class="form-group col-sm-4">
+                    <label for="Username" class="form-label mt-2">Create Username</label>
+                    <input type="text" class="form-control" id="username" placeholder="Username">
+                </div>
+                <div class="form-group col-sm-4">
+                    <label for="password" class="form-label mt-2">Create Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                    <small id="passwordHelp" class="form-text text-muted">
+                        Password must contain atleast:
+                        <ul>
+                            <li>1 Uppercase Letter</li>
+                            <li>1 Lowercase Letter</li>
+                            <li>1 Number</li>
+                            <li>1 Special Symbol</li>
+                        </ul>
+                    </small>
+                </div>
+            </fieldset>
+            <br>
+            <h1 class="text-center">Personal Information</h1>
+            <hr>
+            <fieldset>
+                <div class="form-group d-flex align-items-center">
+                    <div class="col-sm-2">
+                        <label for="nameFirst" class="form-label mt-4">First Name:</label>
+                        <input type="text" class="form-control" id="nameFirst" placeholder="Johnny">
+                    </div>
+                    <div class="col-sm-2">
+                        <label for="nameMidde" class="form-label mt-4">Middle Inital:</label>
+                        <input type="text" class="form-control" id="nameMiddle" placeholder="A">
+                    </div>
+                    <div class="col-sm-2">
+                        <label for="namelast" class="form-label mt-4">Last Name:</label>
+                        <input type="text" class="form-control" id="nameLast" placeholder="Seed">
+                    </div>
+                </div> 
+            </fieldset>
+            <fieldset>
+                <div class="form-group d-flex align-items-center">
+                    <div class="col-sm-4">
+                        <label for="addressHome-Street" class="form-label mt-4">Home Address:</label>
+                        <input type="text" class="form-control" id="addressHome-Street" placeholder="1234 Fake St.">
+                    </div>
+                    <div class="col-sm-2">
+                        <label for="addressHome-City" class="form-label mt-4">City:</label>
+                        <input type="text" class="form-control" id="addressHome-City" placeholder="Pomona">
+                    </div>
+                    <div class="col-sm-2">
+                        <label for="addressHome-State" class="form-label mt-4">State:</label>
+                        <input type="text" class="form-control" id="addressHome-State" placeholder="CA">
+                    </div>
+                    <div class="col-sm-2">
+                        <label for="addressHome-Zipcode" class="form-label mt-4">Zipcode</label>
+                        <input type="text" class="form-control" id="addressHome-Zipcode" placeholder="91766">
+                    </div>
+                </div>
+            </fieldset>
+            <br>
+            <h1 class="text-center">Contact Information</h1>
+            <hr>
+            <fieldset>
+                <div>
+                    <div class="form-group col-sm-4">
+                        <label for="addressEmail" class="form-label mt-4">Enter Email Here</label>
+                        <input type="email" class="form-control" id="emailAddress" aria-describedby="emailHelp" placeholder="email@example.com">
+                    </div>
+                    <div class="col-sm-2">
+                        <label for="contactPhone" class="form-label mt-2">Phone Number:</label>
+                        <input type="tel" class="form-control" id="contactPhone" placeholder="(555)555-5555">
+                    </div>
+                    <div class="col-sm-2">
+                        <label for="contactDiscord" class="form-label mt-2">Discord ID:</label>
+                        <input type="text" class="form-control" id="contactDiscord" placeholder="Discord#1234">
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <hr>
+        <div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+        </div>
+    </form>
+</body>
+</html>

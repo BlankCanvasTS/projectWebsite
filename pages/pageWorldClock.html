@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  <link  rel="stylesheet" href="/bootstrap.css">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="pageHome.html">Project 1</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="pageHome.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Applications</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="">Calculator</a>
+              <a class="dropdown-item" href="pageWorldClock.html">World Clock</a>
+              <a class="dropdown-item" href="">Who's Birthday is it?</a>
+              <a class="dropdown-item"></a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pageJoin.html">Join</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-flex">
+        <input class="form-control mr-se-2" type="text" placeholder="Search...">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">GO</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <h1 class="text-center">World Clock</h1>
+    <hr>
+    <h2>Pacific Standard Time</h2>
+    <div class=""id="clockPST">
+        <script src="/Projects/Project 1/worldClock/clockPST.js"></script>
+    </div>
+    <h2>Eastern Standard Time</h2>
+    <div class=""id="clock2ST">
+        <script src="/Projects/Project 1/worldClock/clockEST.js"></script>
+    </div>
+    
+  </div>
+</body>
+</html>
