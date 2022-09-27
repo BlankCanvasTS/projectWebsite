@@ -1,45 +1,33 @@
-function TimePST(){
-    //initializing Time Variables
-    var datePST = new Date();
-    var hourPST = datePST.getHours();
-    var minutePST = datePST.getMinutes();
-    var secondPST = datePST.getSeconds();
+const clockPST = document.querySelector('#clockPST');
+const clockEST = document.querySelector('#clockEST');
+
+
+function clockChange(timeZone, element){
+    const date1 = new Date();
+
+    const foo = date1.toLocaleString('en-US', {
+    timeZone: timeZone,
+    month: "long",
+    year: "numeric",
+    day: "numeric",
+    hour: 'numeric',
+    minute:'numeric',
+    second:'numeric'
+
+
+    });
     
-    //Setting up AM/PM cycle
-    var periodPST = "";
-    if(hourPST > 12){
-        periodPST = "PM";
-    }else{
-        periodPST = "AM";
-    }
-
-    //12 hour format
-    if(hourPST == 0){
-        hourPST = 12;
-    }else{
-        if(hourPST > 12){
-            hourPST = hourPST - 12;
-        }
-    }
-
-    //Time update
-    hourPST = update(hourPST);
-    minutePST = update(minutePST);
-    secondPST = update(secondPST);
-
-    //Adding time to Page
-    document.getElementById("clockPST").innerText = hourPST + " : " + minutePST + " : " + secondPST + " " + periodPST;
-    //set Timer to 1 second
-    setTimeout(TimePST, 1000);
+    let format = foo.split('at');
+    let [date, time] = format;
+    element.innerHTML = `
+        <div class="h5">${date.trim()}</div>
+        <div>${time}</div>
+    `;
 }
 
-//Update time lements if less than 10
+clockChange('America/New_York', clockEST);
 
-function update(t){
-    if(t < 10){
-        return "0" + t;
-    }else{
-        return t;
-    }
-}
-TimePST();
+clockChange('America/Los_Angeles', clockPST);
+
+
+
